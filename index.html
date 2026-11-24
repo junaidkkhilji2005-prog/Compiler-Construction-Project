@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An interactive educational website explaining Compiler vs Interpreter.">
+    <title>CodeVision | Compiler vs Interpreter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">⌘ Code<span>Vision</span></a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#compiler">Compiler</a></li>
+                <li><a href="#interpreter">Interpreter</a></li>
+                <li><a href="#comparison">Comparison</a></li>
+                <li><a href="#playground">Playground</a></li>
+                <li><a href="#quiz" class="nav-btn">Take Quiz ↗</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-grid"></div>
+
+            <div class="container hero-content">
+                <div class="badge">
+                    <span class="status-dot"></span>
+                    COMPUTER SCIENCE ASSIGNMENT
+                </div>
+
+                <h1>
+                    Compiler <span class="gradient-text">vs</span> Interpreter
+                    <br>
+                    <span class="hero-subtitle">Understanding How Code Executes</span>
+                </h1>
+
+                <p class="hero-description">
+                    Explore the fascinating world of programming language translation.
+                    Learn how compilers and interpreters convert source code into
+                    instructions that computers can execute.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#compiler" class="btn btn-primary">Explore Topics ↗</a>
+                    <a href="#comparison" class="btn btn-secondary">Compare Both</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <h3>02</h3>
+                        <p>Translation Methods</p>
+                    </div>
+                    <div>
+                        <h3>08</h3>
+                        <p>Comparison Factors</p>
+                    </div>
+                    <div>
+                        <h3>05</h3>
+                        <p>Quiz Questions</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="window-dot red"></span>
+                        <span class="window-dot yellow"></span>
+                        <span class="window-dot green"></span>
+                        <span class="window-title">main.py</span>
+                    </div>
+
+                    <div class="code-content">
+                        <p><span class="line">01</span> <span class="purple">def</span> <span class="blue">main</span>():</p>
+                        <p><span class="line">02</span> &nbsp;&nbsp; <span class="purple">print</span>(<span class="green-text">"Hello World"</span>)</p>
+                        <p><span class="line">03</span></p>
+                        <p><span class="line">04</span> <span class="blue">main</span>()</p>
+                    </div>
+
+                    <div class="code-footer">
+                        <span>● Ready</span>
+                        <span>Python</span>
+                    </div>
+                </div>
+
+                <div class="floating-tag tag-one">⚡ Compiler</div>
+                <div class="floating-tag tag-two">🔄 Interpreter</div>
+                <div class="floating-tag tag-three">💻 Source Code</div>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section class="section" id="introduction">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-tag">01 — INTRODUCTION</span>
+                    <h2>What Are <span class="gradient-text">Compilers & Interpreters?</span></h2>
+                    <p>
+                        Computers execute machine instructions. Compilers and interpreters
+                        are language-processing systems that help execute programs written
+                        in high-level programming languages.
+                    </p>
+                </div>
+
+                <div class="info-grid">
+                    <article class="info-card">
+                        <div class="card-icon">⚙️</div>
+                        <h3>Compiler</h3>
+                        <p>
+                            A compiler translates a source program into another form,
+                            such as machine code or intermediate code, before execution
+                            of the resulting program.
+                        </p>
+                        <a href="#compiler" class="card-link">Learn More →</a>
+                    </article>
+
+                    <article class="info-card">
+                        <div class="card-icon">🔄</div>
+                        <h3>Interpreter</h3>
+                        <p>
+                            An interpreter executes a program by processing its
+                            instructions at runtime. Depending on its design, it may
+                            interpret code directly or use intermediate representations.
+                        </p>
+                        <a href="#interpreter" class="card-link">Learn More →</a>
+                    </article>
+                </div>
+
+                <div class="highlight-box">
+                    <div class="highlight-icon">💡</div>
+                    <div>
+                        <h3>Key Concept</h3>
+                        <p>
+                            Both compilers and interpreters help translate or execute
+                            programming languages, but they differ in how they process
+                            programs and when execution takes place.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compiler Section -->
+        <section class="section section-dark" id="compiler">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-tag">02 — COMPILER</span>
+                    <h2>Understanding the <span class="gradient-text">Compiler</span></h2>
+                    <p>
+                        A compiler translates source code into a target representation,
+                        often producing machine code or an executable program.
+                    </p>
+                </div>
+
+                <div class="feature-layout">
+                    <div class="feature-text">
+                        <h3>What is a Compiler?</h3>
+                        <p>
+                            A compiler is system software that translates a program
+                            written in a source language into a target language.
+                            In many compiled languages, the compiler produces machine
+                            code or an object file that can be linked and executed.
+                        </p>
+
+                        <ul class="check-list">
+                            <li>✓ Translates source code into target code</li>
+                            <li>✓ Often detects errors during compilation</li>
+                            <li>✓ Can optimize code before execution</li>
+                            <li>✓ Compiled output may run without recompiling the source</li>
+                        </ul>
+                    </div>
+
+                    <div class="process-card">
+                        <h3>Compiler Workflow</h3>
+
+                        <div class="process-step">
+                            <span class="step-icon">📝</span>
+                            <div>
+                                <h4>Source Code</h4>
+                                <p>Program written in a high-level language</p>
+                            </div>
+                        </div>
+
+                        <div class="process-arrow">↓</div>
+
+                        <div class="process-step">
+                            <span class="step-icon">⚙️</span>
+                            <div>
+                                <h4>Compiler</h4>
+                                <p>Translates and may optimize the program</p>
+                            </div>
+                        </div>
+
+                        <div class="process-arrow">↓</div>
+
+                        <div class="process-step">
+                            <span class="step-icon">📦</span>
+                            <div>
+                                <h4>Target Code</h4>
+                                <p>Machine code or another target representation</p>
+                            </div>
+                        </div>
+
+                        <div class="process-arrow">↓</div>
+
+                        <div class="process-step process-success">
+                            <span class="step-icon">🚀</span>
+                            <div>
+                                <h4>Execution</h4>
+                                <p>The resulting program runs on a suitable system</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <span class="example-label">EXAMPLE</span>
+                    <h3>Languages That Commonly Use Compilation</h3>
+
+                    <div class="language-tags">
+                        <span>C</span>
+                        <span>C++</span>
+                        <span>Rust</span>
+                        <span>Go</span>
+                    </div>
+
+                    <p>
+                        These languages commonly use compilers to generate machine
+                        code or another target representation. Actual execution
+                        workflows depend on the language and toolchain.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interpreter Section -->
+        <section class="section" id="interpreter">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-tag">03 — INTERPRETER</span>
+                    <h2>Understanding the <span class="gradient-text">Interpreter</span></h2>
+                    <p>
+                        An interpreter executes a program at runtime by processing
+                        its instructions or an intermediate representation.
+                    </p>
+                </div>
+
+                <div class="feature-layout reverse-layout">
+                    <div class="process-card">
+                        <h3>Interpreter Workflow</h3>
+
+                        <div class="process-step">
+                            <span class="step-icon">📝</span>
+                            <div>
+                                <h4>Source Code</h4>
+                                <p>Program written in a programming language</p>
+                            </div>
+                        </div>
+
+                        <div class="process-arrow">↓</div>
+
+                        <div class="process-step">
+                            <span class="step-icon">🔍</span>
+                            <div>
+                                <h4>Interpreter</h4>
+                                <p>Processes program instructions at runtime</p>
+                            </div>
+                        </div>
+
+                        <div class="process-arrow">↓</div>
+
+                        <div class="process-step">
+                            <span class="step-icon">⚡</span>
+                            <div>
+                                <h4>Execution</h4>
+                                <p>Instructions are carried out by the runtime system</p>
+                            </div>
+                        </div>
+
+                        <div class="process-arrow">↓</div>
+
+                        <div class="process-step process-success">
+                            <span class="step-icon">📤</span>
+                            <div>
+                                <h4>Output</h4>
+                                <p>The program produces its result</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-text">
+                        <h3>What is an Interpreter?</h3>
+                        <p>
+                            An interpreter is software that executes a program by
+                            processing its instructions during runtime. Some
+                            interpreters execute source code directly, while others
+                            first translate it into an intermediate form such as bytecode.
+                        </p>
+
+                        <ul class="check-list">
+                            <li>✓ Executes program instructions at runtime</li>
+                            <li>✓ Often supports interactive development</li>
+                            <li>✓ Can report errors during execution</li>
+                            <li>✓ Does not necessarily produce a standalone executable</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <span class="example-label">EXAMPLE</span>
+                    <h3>Languages Commonly Associated with Interpretation</h3>
+
+                    <div class="language-tags">
+                        <span>Python</span>
+                        <span>JavaScript</span>
+                        <span>Ruby</span>
+                        <span>PHP</span>
+                    </div>
+
+                    <p>
+                        These languages are often associated with interpreted
+                        execution, although modern implementations may use
+                        bytecode, virtual machines, or just-in-time compilation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section class="section section-dark" id="comparison">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-tag">04 — COMPARISON</span>
+                    <h2>Compiler <span class="gradient-text">vs</span> Interpreter</h2>
+                    <p>
+                        Compare their working methods, performance, error handling,
+                        and execution requirements.
+                    </p>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Compiler</th>
+                                <th>Interpreter</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Translation</td>
+                                <td>Translates source code into target code</td>
+                                <td>Processes and executes instructions at runtime</td>
+                            </tr>
+
+                            <tr>
+                                <td>Execution</td>
+                                <td>Often runs previously generated target code</td>
+                                <td>Execution is managed by the runtime interpreter</td>
+                            </tr>
+
+                            <tr>
+                                <td>Speed</td>
+                                <td>Can provide fast execution after compilation</td>
+                                <td>May have runtime interpretation overhead</td>
+                            </tr>
+
+                            <tr>
+                                <td>Error Detection</td>
+                                <td>Many errors are detected during compilation</td>
+                                <td>Some errors appear when the affected code executes</td>
+                            </tr>
+
+                            <tr>
+                                <td>Output</td>
+                                <td>May produce machine code, object code, or bytecode</td>
+                                <td>May execute directly or use an intermediate form</td>
+                            </tr>
+
+                            <tr>
+                                <td>Portability</td>
+                                <td>Native output may depend on the target platform</td>
+                                <td>Often requires a compatible interpreter or runtime</td>
+                            </tr>
+
+                            <tr>
+                                <td>Examples</td>
+                                <td>C, C++, Rust</td>
+                                <td>Python, Ruby (common execution models)</td>
+                            </tr>
+
+                            <tr>
+                                <td>Development</td>
+                                <td>Often requires a compilation step</td>
+                                <td>Can support interactive execution and testing</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="highlight-box">
+                    <div class="highlight-icon">🎯</div>
+                    <div>
+                        <h3>Important Note</h3>
+                        <p>
+                            Modern programming language implementations often combine
+                            compilation and interpretation. The differences described
+                            here are general tendencies, not absolute rules.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advantages and Disadvantages -->
+        <section class="section" id="advantages">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-tag">05 — EVALUATION</span>
+                    <h2>Advantages & <span class="gradient-text">Disadvantages</span></h2>
+                    <p>
+                        Both approaches have benefits and limitations depending
+                        on the programming language and application.
+                    </p>
+                </div>
+
+                <div class="pros-cons-grid">
+                    <div class="pros-card">
+                        <h3>⚙️ Compiler</h3>
+
+                        <h4 class="pros-title">Advantages</h4>
+                        <ul>
+                            <li>Can generate highly optimized machine code</li>
+                            <li>Often provides fast execution after compilation</li>
+                            <li>Can detect many errors before execution</li>
+                            <li>Compiled output can be distributed separately</li>
+                        </ul>
+
+                        <h4 class="cons-title">Disadvantages</h4>
+                        <ul>
+                            <li>Compilation can take additional time</li>
+                            <li>Native binaries may be platform-dependent</li>
+                            <li>Debugging may require additional tools</li>
+                        </ul>
+                    </div>
+
+                    <div class="cons-card">
+                        <h3>🔄 Interpreter</h3>
+
+                        <h4 class="pros-title">Advantages</h4>
+                        <ul>
+                            <li>Can support rapid testing and development</li>
+                            <li>Often provides interactive execution</li>
+                            <li>Can simplify experimentation and debugging</li>
+                            <li>Can run on multiple platforms with a suitable runtime</li>
+                        </ul>
+
+                        <h4 class="cons-title">Disadvantages</h4>
+                        <ul>
+                            <li>May introduce runtime execution overhead</li>
+                            <li>Usually requires a compatible runtime</li>
+                            <li>Some errors appear only when code executes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Playground -->
+        <section class="section section-dark" id="playground">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-tag">06 — INTERACTIVE LEARNING</span>
+                    <h2>Code <span class="gradient-text">Playground</span></h2>
+                    <p>
+                        Explore a simplified simulation of how compiled and
+                        interpreted execution differ.
+                    </p>
+                </div>
+
+                <div class="playground">
+                    <div class="playground-header">
+                        <div class="playground-title">
+                            <span class="status-dot"></span>
+                            Interactive Code Simulator
+                        </div>
+
+                        <div class="playground-controls">
+                            <button class="mode-btn active" id="compilerMode">Compiler</button>
+                            <button class="mode-btn" id="interpreterMode">Interpreter</button>
+                        </div>
+                    </div>
+
+                    <div class="playground-body">
+                        <div class="editor-panel">
+                            <div class="editor-header">
+                                <span>📝 source_code.txt</span>
+                                <span>Demo Language</span>
+                            </div>
+
+                            <textarea id="codeEditor" spellcheck="false">x = 10
+y = 20
+print(x + y)</textarea>
+
+                            <button id="runCode" class="btn btn-primary run-btn">
+                                ▶ Run Simulation
+                            </button>
+                        </div>
+
+                        <div class="output-panel">
+                            <div class="output-header">
+                                <span>Terminal Output</span>
+                                <button id="clearOutput" class="clear-btn">Clear</button>
+                            </div>
+
+                            <div id="output" class="terminal">
+                                <p class="terminal-muted">Your output will appear here...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="playground-note">
+                        ⚠️ This is an educational simulation, not a real compiler
+                        or interpreter. It recognizes a small set of example statements.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz -->
+        <section class="section quiz-section" id="quiz">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-tag">07 — TEST YOUR KNOWLEDGE</span>
+                    <h2>Interactive <span class="gradient-text">Quiz</span></h2>
+                    <p>
+                        Test your understanding of compilers and interpreters
+                        with these five questions.
+                    </p>
+                </div>
+
+                <div class="quiz-container">
+                    <div class="quiz-header">
+                        <span id="questionCounter">Question 1 of 5</span>
+                        <span id="scoreDisplay">Score: 0</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+
+                    <h3 id="questionText">Loading question...</h3>
+
+                    <div class="quiz-options" id="quizOptions"></div>
+
+                    <p id="feedback" class="feedback" aria-live="polite"></p>
+
+                    <button id="nextBtn" class="btn btn-primary next-btn" disabled>
+                        Next Question →
+                    </button>
+
+                    <div id="quizResult" class="quiz-result hidden">
+                        <h3>Quiz Completed! 🎉</h3>
+                        <p id="finalScore"></p>
+                        <button id="restartBtn" class="btn btn-primary">
+                            Restart Quiz ↻
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="section section-dark" id="conclusion">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-tag">08 — CONCLUSION</span>
+                    <h2>Project <span class="gradient-text">Conclusion</span></h2>
+
+                    <p>
+                        Compilers and interpreters are important components of
+                        programming language implementation. Compilers translate
+                        source code into a target representation, while interpreters
+                        execute programs through runtime processing. Both approaches
+                        have advantages and limitations, and many modern language
+                        implementations combine elements of both techniques.
+                        Understanding these concepts helps students learn how
+                        programming languages work and how software is executed.
+                    </p>
+                </div>
+
+                <div class="highlight-box conclusion-box">
+                    <div class="highlight-icon">🚀</div>
+                    <div>
+                        <h3>Keep Learning. Keep Building.</h3>
+                        <p>
+                            Understanding how code is translated and executed
+                            is a fundamental step in becoming a skilled programmer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#home" class="logo">⌘ Code<span>Vision</span></a>
+            <p>Compiler vs Interpreter — Computer Science Assignment</p>
+            <p class="copyright">
+                © <span id="year"></span> CodeVision. Created for educational purposes.
+            </p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
